@@ -1,9 +1,13 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "Image": {
-    "Name": "docker-react-new3",
-    "Update": "true"
-  },
+  "containerDefinitions": [
+    {
+      "name": "api",
+      "image": "nginx:latest",
+      "essential": true,
+      "memory": 128
+    }
+  ],
   "portMappings": [
     {
       "hostPort": 80,
