@@ -2,8 +2,8 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "api",
-      "image": "nginx:latest",
+      "name": "api2",
+      "image": "nginx2:latest",
       "essential": true,
       "memory": 128
     }
