@@ -4,13 +4,13 @@
     {
       "name": "builder",
       "host": {
-        "sourcePath": "/docker-react-new2"
+        "sourcePath": "/var/app/current"
       }
     },
     {
       "name": "nginx",
       "host": {
-        "sourcePath": "/docker-react-new2/app/build"
+        "sourcePath": "/var/app/current/app/build"
       }
     }
   ],
@@ -23,7 +23,7 @@
       "mountPoints": [
         {
           "sourceVolume": "builder",
-          "containerPath": "/docker-react-new2"
+          "containerPath": "/app/build"
         }
       ]
     },
