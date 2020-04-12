@@ -1,17 +1,50 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "containerDefinitions": [
+  "volumes": [
     {
-      "name": "api2",
-      "image": "nginx2:latest",
-      "essential": true,
-      "memory": 128
+      "name": "builder",
+      "host": {
+        "sourcePath": .
+      }
+    },
+    {
+      "name": "nginx",
+      "host": {
+        "sourcePath": "./app/build"
+      }
     }
   ],
-  "portMappings": [
+  "containerDefinitions": [
+    {
+      "name": "builder",
+      "image": "node:alpine",
+      "essential": true,
+      "memory": 128,
+      "mountPoints": [
+        {
+          "sourceVolume": "builder",
+          "containerPath": .
+        }
+      ]
+    },
+    {
+      "name": "nginx",
+      "image": "nginx",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
     {
       "hostPort": 80,
       "containerPort": 80
+    }
+  ],
+      "mountPoints": [
+        {
+          "sourceVolume": "nginx",
+          "containerPath": "/usr/share/nginx/html"
+        }
+      ]
+
     }
   ]
 }
