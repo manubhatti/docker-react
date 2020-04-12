@@ -25,7 +25,9 @@
           "sourceVolume": "builder",
           "containerPath": "/app/build"
         }
-      ]
+      ],
+      "command": [ "npm", "install"],
+      "command": [ "npm", "run", "build"]
     },
     {
       "name": "nginx",
