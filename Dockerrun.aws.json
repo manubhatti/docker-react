@@ -4,7 +4,7 @@
     {
       "name": "builder",
       "host": {
-        "sourcePath": .
+        "sourcePath": "."
       }
     },
     {
@@ -23,7 +23,7 @@
       "mountPoints": [
         {
           "sourceVolume": "builder",
-          "containerPath": .
+          "containerPath": "."
         }
       ]
     },
