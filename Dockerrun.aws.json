@@ -4,13 +4,13 @@
     {
       "name": "builder",
       "host": {
-        "sourcePath": "./"
+        "sourcePath": "/"
       }
     },
     {
       "name": "nginx",
       "host": {
-        "sourcePath": "./app/build"
+        "sourcePath": "/app/build"
       }
     }
   ],
@@ -23,7 +23,7 @@
       "mountPoints": [
         {
           "sourceVolume": "builder",
-          "containerPath": "./"
+          "containerPath": "/"
         }
       ]
     },
