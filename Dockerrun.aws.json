@@ -10,7 +10,7 @@
     {
       "name": "nginx",
       "host": {
-        "sourcePath": "/var/app/current/app/build"
+        "sourcePath": "/var/app/current"
       }
     }
   ],
@@ -23,7 +23,7 @@
       "mountPoints": [
         {
           "sourceVolume": "builder",
-          "containerPath": "/app/build"
+          "containerPath": "/app"
         }
       ],
       "Entrypoint": "/app",
