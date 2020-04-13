@@ -19,7 +19,7 @@
       "name": "builder",
       "image": "node:alpine",
       "essential": true,
-      "memory": 128,
+      "memory": 256,
       "mountPoints": [
         {
           "sourceVolume": "builder",
@@ -33,7 +33,7 @@
       "name": "nginx",
       "image": "nginx",
       "essential": true,
-      "memory": 128,
+      "memory": 256,
       "mountPoints": [
         {
           "sourceVolume": "nginx",
