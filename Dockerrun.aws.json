@@ -35,19 +35,18 @@
       "image": "nginx",
       "essential": true,
       "memory": 128,
-      "portMappings": [
-    {
-      "hostPort": 80,
-      "containerPort": 80
-    }
-  ],
       "mountPoints": [
         {
           "sourceVolume": "nginx",
           "containerPath": "/usr/share/nginx/html"
         }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
       ]
-
     }
   ]
 }
