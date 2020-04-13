@@ -26,6 +26,7 @@
           "containerPath": "/app/build"
         }
       ],
+      "Entrypoint": "/app",
       "command": [ "npm", "install"],
       "command": [ "npm", "run", "build"]
     },
