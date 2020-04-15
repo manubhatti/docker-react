@@ -2,13 +2,13 @@
   "AWSEBDockerrunVersion": 2,
   "volumes": [
     {
-      "name": "builder",
+      "name": "builder_volume",
       "host": {
         "sourcePath": "/var/app/current"
       }
     },
     {
-      "name": "nginx",
+      "name": "nginx_volume",
       "host": {
         "sourcePath": "/var/app/current"
       }
@@ -22,12 +22,13 @@
       "memory": 126,
       "mountPoints": [
         {
-          "sourceVolume": "builder",
+          "sourceVolume": "builder_volume",
           "containerPath": "/app"
         }
       ],
       "Entrypoint": "/app",
       "command": [ "npm", "install"],
+      "command": [ "npm", "update"],
       "command": [ "npm", "run", "build"]
     },
     {
@@ -37,7 +38,7 @@
       "memory": 126,
       "mountPoints": [
         {
-          "sourceVolume": "nginx",
+          "sourceVolume": "nginx_volume",
           "containerPath": "/usr/share/nginx/html"
         }
       ],
