@@ -17,7 +17,7 @@
   "containerDefinitions": [
     {
       "name": "builder",
-      "image": "node:alpine",
+      "image": "node:alpine3.11",
       "essential": true,
       "memory": 126,
       "mountPoints": [
