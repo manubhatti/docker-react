@@ -27,7 +27,8 @@
         }
       ],
       "Entrypoint": "/app",
-      "command": [ "npm", "run", "build"]
+      "Command": [ "npm", "install" ],
+      "Command": [ "npm", "run", "build" ]
     },
     {
       "name": "nginx",
