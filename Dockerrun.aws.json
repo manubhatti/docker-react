@@ -26,9 +26,9 @@
           "containerPath": "/app"
         }
       ],
-      "Entrypoint": "/app",
-      "Command": [ "npm", "install" ],
-      "Command": [ "npm", "run", "build" ]
+      "entrypoint": "/app",
+      "command": [ "npm", "install" ],
+      "command": [ "npm", "run", "build" ]
     },
     {
       "name": "nginx",
