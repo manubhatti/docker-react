@@ -26,7 +26,7 @@
           "containerPath": "/app"
         }
       ],
-      "entrypoint": "/app",
+      "entryPoint": "/app",
       "command": [ "npm", "install" ],
       "command": [ "npm", "run", "build" ]
     },
@@ -34,7 +34,7 @@
       "name": "nginx",
       "image": "nginx",
       "essential": true,
-      "memory": 126,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
@@ -44,7 +44,8 @@
       "mountPoints": [
         {
           "sourceVolume": "nginx_volume",
-          "containerPath": "/usr/share/nginx/html"
+          "containerPath": "/usr/share/nginx/html",
+	  "readOnly": true
         }
       ]
     }
