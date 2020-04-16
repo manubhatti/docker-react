@@ -27,8 +27,6 @@
         }
       ],
       "Entrypoint": "/app",
-      "command": [ "npm", "install"],
-      "command": [ "npm", "update"],
       "command": [ "npm", "run", "build"]
     },
     {
