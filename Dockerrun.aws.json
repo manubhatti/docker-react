@@ -27,8 +27,13 @@
         }
       ],
       "entryPoint": "/app",
-      "command": [ "npm", "install" ],
-      "command": [ "npm", "run", "build" ]
+      "command": [ "npm",
+                   "install"
+      ],
+      "command": [ "npm",
+                   "run",
+                   "build"
+      ]
     },
     {
       "name": "nginx",
@@ -45,7 +50,7 @@
         {
           "sourceVolume": "nginx_volume",
           "containerPath": "/usr/share/nginx/html",
-	  "readOnly": true
+          "readOnly": true
         }
       ]
     }
